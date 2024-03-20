@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0b4cb435fe6c0874fb85d01af3810e36
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - deathCanvas: {instanceID: 0}
+  - healthText: {instanceID: 0}
+  - spawner: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
