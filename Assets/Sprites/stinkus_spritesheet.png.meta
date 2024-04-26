@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -108,18 +108,282 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: stinkus_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 333.33334
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d62052f1376a0ea4c8c7f9d795176382
+      internalID: 1167954431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stinkus_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 500
+        width: 333.33334
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a00f1db56bd8940876c3ff9d70f24d
+      internalID: 1410486882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stinkus_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 500
+        width: 333.33334
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6654246ddc8b044a4f1d49780ff5c7
+      internalID: 1032953322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stinkus_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 500
+        width: 333.33334
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed4c659166a1d846838753105ef51c1
+      internalID: 571018114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stinkus_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 500
+        width: 333.33334
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd2c5a7b14c9ef54b948b8bf42e54c5c
+      internalID: -125920103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stinkus_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 500
+        width: 333.33334
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e49a2fa452ddd4f9e05d6beeaa5bac
+      internalID: 1606917564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stinkus_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 333.33334
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8278ec8a8e63f1a45bae930c246bc05f
+      internalID: -284411885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stinkus_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 0
+        width: 333.33334
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2fe2f99e46b164186cd5e3526105b5
+      internalID: -1604658896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stinkus_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 0
+        width: 333.33334
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b90d108867278a341a48e3bf99ca7b26
+      internalID: -1557736131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stinkus_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 0
+        width: 333.33334
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d1f3701f70d3e4d839886d4b2fb0af
+      internalID: -1051280315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stinkus_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 0
+        width: 333.33334
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2984146921a80145ad027ad3bc28870
+      internalID: 664558061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stinkus_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 0
+        width: 333.33334
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61b95f2b37c0ba40973451cd8fa5b06
+      internalID: 701218824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      stinkus_spritesheet_0: 1167954431
+      stinkus_spritesheet_1: 1410486882
+      stinkus_spritesheet_10: 664558061
+      stinkus_spritesheet_11: 701218824
+      stinkus_spritesheet_2: 1032953322
+      stinkus_spritesheet_3: 571018114
+      stinkus_spritesheet_4: -125920103
+      stinkus_spritesheet_5: 1606917564
+      stinkus_spritesheet_6: -284411885
+      stinkus_spritesheet_7: -1604658896
+      stinkus_spritesheet_8: -1557736131
+      stinkus_spritesheet_9: -1051280315
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

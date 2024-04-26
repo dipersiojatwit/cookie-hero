@@ -9,6 +9,8 @@ TagManager:
   - One
   - TheCounts
   - Wheel
+  - ShinyStar
+  - ShinySparkle
   layers:
   - Default
   - TransparentFX

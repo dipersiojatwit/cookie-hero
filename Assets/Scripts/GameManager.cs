@@ -5,6 +5,7 @@ using UnityEngine.Scripting;
 using TMPro;
 using UnityEngine.SceneManagement;
 using System;
+using System.Diagnostics.Eventing.Reader;
 public class GameManager : MonoBehaviour
 {
     //singlton
@@ -39,10 +40,12 @@ public class GameManager : MonoBehaviour
     public count theCounts;
     public AudioClip cookieHeroDeathOne;
     public AudioClip cookieHeroDeathTwo;
+    public AudioClip executeOrder;
     private Player player;
     private Spawner spawner;
     private AudioSource audioSource;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
     
     private void Start()
     {   
@@ -51,11 +54,27 @@ public class GameManager : MonoBehaviour
         spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>();
         theCounts = GameObject.FindGameObjectWithTag("TheCounts").GetComponent<count>();
         animator = GameObject.FindGameObjectWithTag("Wheel").GetComponent<Animator>();
+        spriteRenderer = GameObject.FindGameObjectWithTag("Wheel").GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
         player.Reset();
 
-        //disable ui
+        //disable death UI 
         deathCanvas.gameObject.SetActive(false);
+
+    }
+
+    void Update()
+    {   
+        // make UI elements transparent on overlay
+        if(player.transform.position.x < -5.1)
+        {
+            spriteRenderer.color = new Color(1, 1, 1, 0.8f);
+
+        }
+        else
+        {
+            spriteRenderer.color = new Color(1, 1, 1, 1);
+        }
 
     }
 
@@ -95,6 +114,10 @@ public class GameManager : MonoBehaviour
     {   
         
         spawner.gameObject.SetActive(false);
+        Stinkus.trashCanSpawn = false;
+        Stinkus.canAct = false;
+
+        // make sure death canvas isn't already on
         if (deathCanvas.gameObject.activeSelf)
         {
             deathCanvas.gameObject.SetActive(false);
@@ -102,21 +125,26 @@ public class GameManager : MonoBehaviour
         else
         {   
             roundScore.text = "x" + cookieCount;
-            if(MenuManager.instance().updateHighScore(cookieCount))
-            {
-                
-            }
-            
+
+            // MenuManager will check if high score should update
+            MenuManager.instance().updateHighScore(cookieCount);
             deathCanvas.gameObject.SetActive(true);
+
+            // choose a random death sound if order 66 isn't executed
             random = UnityEngine.Random.Range(1, 100);
-            if (random < 50)
+            if (cookieCount == 66)
+            {
+                audioSource.PlayOneShot(executeOrder);
+            }
+            else if (random < 50)
             {
                 audioSource.PlayOneShot(cookieHeroDeathOne);
             }
-            else
+            else if(random >= 50)
             {
                 audioSource.PlayOneShot(cookieHeroDeathTwo);
             }
+        
         }
 
     }
@@ -124,14 +152,18 @@ public class GameManager : MonoBehaviour
 
     public void onResetClick()
     {   
-        
         if(deathCanvas.gameObject.activeSelf)
         {
-        deathCanvasSwitch();
-        player.Reset();
-        spawner.gameObject.SetActive(true);
-        spawner.Reset();
-        theCounts.Reset();
+            deathCanvasSwitch();
+            player.Reset();
+            spawner.gameObject.SetActive(true);
+            Spawner.canSpawn = true;
+            Stinkus.trashCanSpawn = true;
+            Stinkus.canAct = true;
+            spawner.Reset();
+            theCounts.Reset();
+            Stinkus.Reset();
+            Heart.SetHeartDieFalse();
         }
 
     }
@@ -142,6 +174,7 @@ public class GameManager : MonoBehaviour
 
     }
 
+    // animation events
     public void numberOne()
     {
         spriteOne.SetActive(true);
@@ -167,4 +200,5 @@ public class GameManager : MonoBehaviour
         spriteThree.SetActive(false);
 
     }
+
 }

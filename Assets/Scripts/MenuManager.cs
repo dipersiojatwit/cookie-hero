@@ -30,13 +30,8 @@ public class MenuManager : MonoBehaviour
     void Start()
     {
         highScoreText.text = "" + highScore;
+        Screen.SetResolution(936, 527, false);
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void onPlayClick()
