@@ -22,7 +22,6 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         this.transform.Translate(Vector3.down * speed * Time.deltaTime);
-        // use player vector
 
     }
 
@@ -35,8 +34,6 @@ public class Enemy : MonoBehaviour
             Vector3 pos = this.transform.position;
             pos.y -= 0.45f;
             Instantiate(hitEffect, pos, Quaternion.identity);
-            // destroy the firball after it hits the player
-            
             Destroy(this.gameObject);
         }
 

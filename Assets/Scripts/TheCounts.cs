@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Remoting.Messaging;
-using UnityEditor.Animations;
-using UnityEditor.U2D;
 using UnityEngine;
 
 public class count : MonoBehaviour
