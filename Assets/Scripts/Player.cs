@@ -279,7 +279,7 @@ public class Player : MonoBehaviour
         dashCooldown = 0;
         speed = 5;
         isShiny = false;
-        Vector3 pos = new Vector3(0.0f, -1.47f, 0.0f);
+        Vector3 pos = new Vector3(0.0f, -1.85f, 0.0f);
         this.transform.position = pos;
         this.gameObject.SetActive(true);
         GameManager.instance().updateHealth(maxHealth);
