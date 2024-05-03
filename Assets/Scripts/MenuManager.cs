@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.PlayerLoop;
 
 public class MenuManager : MonoBehaviour
 {   
@@ -26,6 +27,9 @@ public class MenuManager : MonoBehaviour
 
     public TMP_Text highScoreText;
     public static int highScore = 0;
+    public Animator animator;
+    private bool isLoadMain;
+    private float transitionTimer;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,9 +38,26 @@ public class MenuManager : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        if (isLoadMain)
+        {
+            transitionTimer -= Time.deltaTime;
+
+            if (transitionTimer <= 0)
+            {
+                SceneManager.LoadScene("MainScene");
+            }
+        }
+
+    }
+
     public void onPlayClick()
     {
-        SceneManager.LoadScene("MainScene");
+        animator.SetBool("isFadeIn", true);
+        transitionTimer = .9f;
+        isLoadMain = true;
+
     }
 
     public bool updateHighScore(int score)
