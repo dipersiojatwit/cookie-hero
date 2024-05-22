@@ -28,8 +28,7 @@ public class Spawner : MonoBehaviour
 
         if (spawnTimer <= 0 && timeRemaining <= 0 && canSpawn)
         {
-            int index = Random.Range(0, enemies.Length);
-            GameObject enemy = enemies[index];
+            GameObject enemy = enemies[Random.Range(0, enemies.Length)];
             float x = Random.Range(-9.0f, 9.0f);
             Vector3 pos = new Vector3(x, 10, 0);
             // Quaternion for gimble lock prevention, spawn with Instantiate

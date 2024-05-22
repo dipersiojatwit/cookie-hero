@@ -23,6 +23,7 @@ public class Stinkus : MonoBehaviour
     private static bool isTrashTime;
     private static bool hasLaughed;
     public static bool trashCanSpawn;
+    public static int timesHit = 0;
     private bool isStaring;
     private int random;
     private static float spawnTimer;
@@ -142,11 +143,22 @@ public class Stinkus : MonoBehaviour
             isTrashTime = false;
             hasLaughed = false;
             trashTimeSign.SetActive(false);
-            Spawner.canSpawn = true;
             animator.SetBool("isRetreat", true);
             audioSource.PlayOneShot(retreat);
             spawnTimer = 0.5f;
             timeBetweenActions = 20;
+            
+            // check if the bonus round should be triggered
+            if (timesHit == 0)
+            {   
+                BonusRound.isBonus = true;
+            }
+            else
+            {
+                Spawner.canSpawn = true;
+            }
+            timesHit = 0;
+
         }
         else if (spawnTimer <= 0 && trashCanSpawn)
         {
@@ -225,6 +237,13 @@ public class Stinkus : MonoBehaviour
             hasLaughed = true;
 
         }
+
+    }
+
+    public void GotHit()
+    {
+        timesHit++;
+        PlayLaughClip();
 
     }
 

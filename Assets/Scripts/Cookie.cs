@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class Cookie : MonoBehaviour
 {
-
-
     public float minSpeed = 2.5f;
     public float maxSpeed = 4.5f;
     private float speed;
     public GameObject hitEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +23,6 @@ public class Cookie : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-
         if(other.CompareTag("Player"))
         {
             // other's gameObject, rather than making a reference to player
@@ -32,8 +30,8 @@ public class Cookie : MonoBehaviour
             Vector3 pos = this.transform.position;
             pos.y -= 0.45f;
             Instantiate(hitEffect, pos, Quaternion.identity);
+            BonusRound.bonusRoundCookies++;
             // destroy the firball after it hits the player
-            
             Destroy(this.gameObject);
         }
 
@@ -43,6 +41,7 @@ public class Cookie : MonoBehaviour
             pos.y -= 0.45f;
             Instantiate(hitEffect, pos, Quaternion.identity);
             Destroy(this.gameObject);
+
         }
     }
 }

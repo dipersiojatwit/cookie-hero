@@ -158,7 +158,7 @@ MonoBehaviour:
   random: 0
   deathCanvas: {fileID: 628669652}
   healthText: {fileID: 552648419}
-  cookieCounter: {fileID: 347066163}
+  cookieCounterText: {fileID: 347066163}
   roundScore: {fileID: 637280034}
   spriteOne: {fileID: 366933713}
   spriteTwo: {fileID: 1871024323}
@@ -993,7 +993,7 @@ GameObject:
   - component: {fileID: 552648420}
   - component: {fileID: 552648419}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: HealthText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2600,8 +2600,8 @@ Transform:
   m_GameObject: {fileID: 1092459952}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.15, y: 1.92, z: 0.08353114}
-  m_LocalScale: {x: 3.480234, y: 3.480234, z: 3.480234}
+  m_LocalPosition: {x: 0.05, y: 1.99, z: 0.08353114}
+  m_LocalScale: {x: 0.43089518, y: 0.43089518, z: 0.43089518}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3367,8 +3367,8 @@ Transform:
   m_GameObject: {fileID: 1871024323}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.003063202, y: 2, z: 0.08353114}
-  m_LocalScale: {x: 2.9093034, y: 2.9093034, z: 2.9093034}
+  m_LocalPosition: {x: 0.003063202, y: 2.17, z: 0.08353114}
+  m_LocalScale: {x: 0.4775689, y: 0.4775689, z: 0.4775689}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

@@ -131,8 +131,8 @@ public class Player : MonoBehaviour
         }
         else
         {   
-            // check if Stinkus should laugh during trash time
-            stinkus.PlayLaughClip();
+            // check if Cookie Hero got hit during trash time
+            stinkus.GotHit();
 
             // set invincibility frames
             isInvincible = true;
@@ -163,6 +163,7 @@ public class Player : MonoBehaviour
     public void GetCookie(int value)
     {   
         cookieCount++;
+        BonusRound.ateCookie = true;
         CookieUI.CookieCrunch();
         GameManager.instance().updateCookieCounter(value);
 

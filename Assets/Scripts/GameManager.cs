@@ -30,9 +30,10 @@ public class GameManager : MonoBehaviour
     public int cookieCount = 0;
     public int highScore = 0;
     public int random;
+    private float transitionTimer = 0.4f;
     public Canvas deathCanvas;
     public TMP_Text healthText;
-    public TMP_Text cookieCounter;
+    public TMP_Text cookieCounterText;
     public TMP_Text roundScore;
     public GameObject spriteOne;
     public GameObject spriteTwo;
@@ -57,6 +58,8 @@ public class GameManager : MonoBehaviour
         spriteRenderer = GameObject.FindGameObjectWithTag("Wheel").GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
         player.Reset();
+        healthText.alpha = 0;
+        cookieCounterText.alpha = 0;
 
         //disable death UI 
         deathCanvas.gameObject.SetActive(false);
@@ -65,6 +68,17 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {   
+        if (transitionTimer <= 0)
+        {
+            healthText.alpha = 255;
+            cookieCounterText.alpha = 255;
+        }
+        else
+        {
+            transitionTimer -= Time.deltaTime;
+
+        }
+
         // make UI elements transparent on overlay
         if(player.transform.position.x < -5.1)
         {
@@ -87,7 +101,7 @@ public class GameManager : MonoBehaviour
     public void updateCookieCounter(int value)
     {
         cookieCount += value;
-        cookieCounter.text = "x" + cookieCount;
+        cookieCounterText.text = "x" + cookieCount;
 
     }
 
@@ -106,7 +120,7 @@ public class GameManager : MonoBehaviour
     public void resetCookieCounter()
     {
         cookieCount = 0;
-        cookieCounter.text = "x" + cookieCount;
+        cookieCounterText.text = "x" + cookieCount;
 
     }
 
