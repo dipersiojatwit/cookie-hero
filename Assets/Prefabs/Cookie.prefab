@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 12
   maxSpeed: 12
+  cookieValue: 1
   hitEffect: {fileID: 5416041861357779435, guid: 671363cf0127bc740a8a0a6def9cdb60, type: 3}
 --- !u!212 &403818446422520574
 SpriteRenderer:

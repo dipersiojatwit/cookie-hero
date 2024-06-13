@@ -12,10 +12,10 @@ public class Player : MonoBehaviour
     private int random;
     private int health;
     private int healthRestoreValue;
-    private int cookieCount;
+    public static int cookieCount;
     private float input;
     private float dashDuration;
-    private float dashCooldown;
+    private static float dashCooldown;
     private bool isInvincible;
     private bool isShiny;
     private float invincibilityTimer;
@@ -48,6 +48,7 @@ public class Player : MonoBehaviour
         cookieCount = 0;
         dashDuration = 0;
         dashCooldown = 0;
+
         if (checkShiny())
         {      
             isShiny = true;
@@ -268,6 +269,14 @@ public class Player : MonoBehaviour
                 isInvincible = false;
             }
         }
+    }
+
+    // Called when getting a candy cookie
+    public static void RefillStamina()
+    {   
+        Debug.Log("refill");
+        dashCooldown = 0;
+        GameManager.instance().ResetWheel(true);
     }
 
     public void Reset()

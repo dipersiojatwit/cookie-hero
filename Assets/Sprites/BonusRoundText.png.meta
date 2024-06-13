@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ba1573a5a63059c4687bbaa0f8fa6f1d
+guid: 10c47877e6938c049bef6f0335d39998
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BonusRoundText_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 2600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84a1a2b265c0a14b87b7ddf85cdb967
+      internalID: -2052013898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BonusRoundText_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881ee448c711e72498eede33d7e49d2e
+      internalID: -173233324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +161,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BonusRoundText_0: -2052013898
+      BonusRoundText_1: -173233324
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,65 +1,96 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BonusRound : MonoBehaviour
 {   
-    public GameObject[] cookies;
+    public GameObject candyCookie;
     public static bool isBonus;
     public static bool ateCookie;
     public static int bonusRoundCookies;
+    private float xPos;
+    private Vector3 posVec;
     private int bonusContinueThreshold;
     private float spawnTimerValue;
     private float spawnTimer;
     private int cookiesSpawned;
+    private static Animator animator;
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        animator = GetComponent<Animator>();
         bonusRoundCookies = 0;
-        spawnTimerValue = 2f;
+        spawnTimerValue = 1.7f;
         spawnTimer = spawnTimerValue;
         bonusContinueThreshold = 10;
+
+        // these are used for choosing where to spawn cookies
+        xPos = Random.Range(-9.0f, 9.0f);
+        posVec = new Vector3(xPos, 10, 0);
+
     }
 
     // Update is called once per frame
     void Update()
     {   
-        spawnTimer -= Time.deltaTime;
-
         // check if it's the bonus round
         if (isBonus)
         {
+            spawnTimer -= Time.deltaTime;
+            Debug.Log(Spawner.canSpawn);
+            Debug.Log(isBonus);
             if (spawnTimer <= 0)
-            {
-                GameObject cookie = cookies[Random.Range(0, cookies.Length)];
-                float x = Random.Range(-9.0f, 9.0f);
-                Vector3 pos = new Vector3(x, 10, 0);
-                // Quaternion for gimble lock prevention, spawn with Instantiate
-                Instantiate(cookie, pos, Quaternion.identity);
-                cookiesSpawned++;
+            {   
+                // Generate a random position for the current spawn
+                xPos = Random.Range(-9.0f, 9.0f);
+                posVec = new Vector3(xPos, 10, 0);
+                Instantiate(candyCookie, posVec, Quaternion.identity);
+                
                 spawnTimer = spawnTimerValue;
             }
 
-        }
+            // check if the bonus round should continue every ten cookie spawns
+            if (cookiesSpawned % 10 == 0 && cookiesSpawned != 0)
+            {   
+                Debug.Log("Check continue, cookies spawned: " + cookiesSpawned);
+                if (bonusRoundCookies >= 50)
+                {
+                    PerfectRound();
+                }
+                // bonus round will continue if the cookies eaten meets the required continue ammount
+                else if (bonusRoundCookies >= bonusContinueThreshold)
+                {   
+                    Debug.Log("Continue");
+                    spawnTimerValue -= 0.3f;
+                    bonusContinueThreshold += 10;
+                }
+                else
+                {
+                    ResetBonusRound();
+                }
+            }
 
-        // check if the bonus round should continue every ten cookie spawns
-        if (cookiesSpawned % 10 == 0)
-        {
-            if (bonusRoundCookies >= 50)
-            {
-                PerfectRound();
-            }
-            else if (bonusRoundCookies >= bonusContinueThreshold)
-            {
-                spawnTimerValue -= 0.3f;
-                bonusContinueThreshold += 10;
-            }
-            else
-            {
-                ResetBonusRound();
-            }
         }
         
+    }
+
+    // called during an animation event from ActivateBonusRoundAnimation()
+    public void ActivateBonusRound()
+    {
+        bonusRoundCookies = 0;
+        cookiesSpawned = 0;
+        Spawner.canSpawn = false;
+        isBonus = true;
+
+    }
+
+    public static void ActivateBonusRoundAnimation()
+    {
+        // an animation event activates the bonus round spawn
+        animator.SetBool("isBonusIcon", true);
+
     }
 
     // call when every possible cookie is eaten 
@@ -70,6 +101,7 @@ public class BonusRound : MonoBehaviour
 
     private void ResetBonusRound()
     {
+        Debug.Log("Reset");
         isBonus = false;
         spawnTimer = 2f;
         bonusContinueThreshold = 10;
@@ -77,5 +109,11 @@ public class BonusRound : MonoBehaviour
 
         // set the normal spawner 
         Spawner.canSpawn = true;
+    }
+
+    public void SetAnimationFalse(String animationName)
+    {
+        animator.SetBool(animationName, false);
+        
     }
 }

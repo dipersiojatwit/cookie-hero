@@ -151,7 +151,9 @@ public class Stinkus : MonoBehaviour
             // check if the bonus round should be triggered
             if (timesHit == 0)
             {   
-                BonusRound.isBonus = true;
+                Debug.Log("Bonus!!!");
+                Reset();
+                BonusRound.ActivateBonusRoundAnimation();
             }
             else
             {
@@ -195,13 +197,32 @@ public class Stinkus : MonoBehaviour
         trashTimer = 0;
         spawnTimer = 0.5f;
         timeBetweenActions = 20;
+        timesHit = 0;
         
     }
 
     public void ActivateTrashTime()
     {   
         trashTimeSign.SetActive(true);
-        trashTimer = Random.Range(10, 25);
+
+        // Trash time duration depends on the cookie count
+        if (Player.cookieCount < 10)
+        {
+            trashTimer = 8;
+        }
+        else if (Player.cookieCount < 20)
+        {
+            trashTimer = 10;
+        }
+        else if (Player.cookieCount < 30)
+        {
+            trashTimer = 12;
+        }
+        else
+        {
+            trashTimer = 15;
+        }
+
         isTrashTime = true;
         Spawner.canSpawn = false;
         timeBetweenActions = 25;
@@ -241,9 +262,17 @@ public class Stinkus : MonoBehaviour
     }
 
     public void GotHit()
-    {
-        timesHit++;
-        PlayLaughClip();
+    {   
+        /*
+        times hit is only kept track of during trash time 
+        to determine if the bonus round should start. Times hit
+        is set back to 0 at the end of every trash time. 
+        */
+        if (isTrashTime)
+        {
+            timesHit++;
+            PlayLaughClip();
+        }
 
     }
 

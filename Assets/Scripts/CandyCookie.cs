@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cookie : MonoBehaviour
+public class CandyCookie : MonoBehaviour
 {
     public float minSpeed = 2.5f;
     public float maxSpeed = 4.5f;
@@ -28,12 +28,14 @@ public class Cookie : MonoBehaviour
         {
             // other's gameObject, rather than making a reference to player
             other.gameObject.GetComponent<Player>().GetCookie(cookieValue);
+            Player.RefillStamina();
             Vector3 pos = this.transform.position;
             pos.y -= 0.45f;
             Instantiate(hitEffect, pos, Quaternion.identity);
             BonusRound.bonusRoundCookies++;
             // destroy the cookie after it hits the player
             Destroy(this.gameObject);
+
         }
 
         if (other.CompareTag("Ground"))
@@ -46,3 +48,4 @@ public class Cookie : MonoBehaviour
         }
     }
 }
+
