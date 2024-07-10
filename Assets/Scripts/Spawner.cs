@@ -9,8 +9,8 @@ public class Spawner : MonoBehaviour
     public GameObject[] enemies;
     public float timeBetweenSpawns;
     public static bool canSpawn;
-    private float spawnTimer;
-    private float timeRemaining = 2;
+    public static float spawnTimer;
+    private float timeRemaining = 2.7f;
     
 
     // Start is called before the first frame update
@@ -46,7 +46,7 @@ public class Spawner : MonoBehaviour
 
     public void Reset()
     {
-        timeRemaining = 2;
+        timeRemaining = 2.7f;
 
     }
     

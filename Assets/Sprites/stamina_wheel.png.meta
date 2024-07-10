@@ -114,9 +114,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2666.6665
+        y: 5200
         width: 1160
-        height: 1333.3334
+        height: 1300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,9 +135,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1160
-        y: 2666.6665
+        y: 5200
         width: 1160
-        height: 1333.3334
+        height: 1300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,9 +156,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2320
-        y: 2666.6665
+        y: 5200
         width: 1160
-        height: 1333.3334
+        height: 1300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,9 +177,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3480
-        y: 2666.6665
+        y: 5200
         width: 1160
-        height: 1333.3334
+        height: 1300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,9 +198,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4640
-        y: 2666.6665
+        y: 5200
         width: 1160
-        height: 1333.3334
+        height: 1300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,9 +219,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1333.6666
+        y: 3900
         width: 1160
-        height: 1333.3334
+        height: 1300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,9 +240,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1160
-        y: 1333.6666
+        y: 3900
         width: 1160
-        height: 1333.3334
+        height: 1300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,9 +261,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2320
-        y: 1333.6666
+        y: 3900
         width: 1160
-        height: 1333.3334
+        height: 1300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,9 +282,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3480
-        y: 1333.6666
+        y: 3900
         width: 1160
-        height: 1333.3334
+        height: 1300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,9 +303,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4640
-        y: 1333.6666
+        y: 3900
         width: 1160
-        height: 1333.3334
+        height: 1300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,9 +324,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0.666626
+        y: 2600
         width: 1160
-        height: 1333.3334
+        height: 1300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -345,9 +345,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1160
-        y: 0.666626
+        y: 2600
         width: 1160
-        height: 1333.3334
+        height: 1300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -366,9 +366,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2320
-        y: 0.666626
+        y: 2600
         width: 1160
-        height: 1333.3334
+        height: 1300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,6 +378,153 @@ TextureImporter:
       bones: []
       spriteID: 8c0aa10d1e02f0145bb52af25e7121eb
       internalID: 468877797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamina_wheel_13
+      rect:
+        serializedVersion: 2
+        x: 3480
+        y: 2600
+        width: 1160
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaf496993ec95244da13f86871083ff4
+      internalID: 1359299835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamina_wheel_14
+      rect:
+        serializedVersion: 2
+        x: 4640
+        y: 2600
+        width: 1160
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc98fc5d8cc00d45ba90d091bbb591b
+      internalID: 2043599760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamina_wheel_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1300
+        width: 1160
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1654300d2a994d4cb09c9a650adf35a
+      internalID: -1539409891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamina_wheel_16
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 1300
+        width: 1160
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38eab91ba4bc6a94795aad363d8a705f
+      internalID: -1427938347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamina_wheel_17
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 1300
+        width: 1160
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce9cca36bba2b249958aa80152c18d9
+      internalID: 1179615466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamina_wheel_18
+      rect:
+        serializedVersion: 2
+        x: 3480
+        y: 1300
+        width: 1160
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb3ced9831b0ae469f37f6065889ed4
+      internalID: 1085875696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamina_wheel_19
+      rect:
+        serializedVersion: 2
+        x: 4640
+        y: 1300
+        width: 1160
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 994245f3eac02204ea3034a29b8650b6
+      internalID: -1475223052
       vertices: []
       indices: 
       edges: []
@@ -398,6 +545,13 @@ TextureImporter:
       stamina_wheel_10: 957001794
       stamina_wheel_11: -888840939
       stamina_wheel_12: 468877797
+      stamina_wheel_13: 1359299835
+      stamina_wheel_14: 2043599760
+      stamina_wheel_15: -1539409891
+      stamina_wheel_16: -1427938347
+      stamina_wheel_17: 1179615466
+      stamina_wheel_18: 1085875696
+      stamina_wheel_19: -1475223052
       stamina_wheel_2: -735942161
       stamina_wheel_3: -311066348
       stamina_wheel_4: 1531243760

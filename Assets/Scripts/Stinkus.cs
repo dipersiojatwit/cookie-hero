@@ -54,7 +54,7 @@ public class Stinkus : MonoBehaviour
         }
 
         // check if Stinkus should act
-        if (timeBetweenActions <= 0 && !isTrashTime && !isStaring && canAct)
+        if (timeBetweenActions <= 0 && !isTrashTime && !isStaring && canAct && !BonusRound.isBonus)
         {
             random = Random.Range(1, 100);
             // Check for shake
@@ -149,9 +149,8 @@ public class Stinkus : MonoBehaviour
             timeBetweenActions = 20;
             
             // check if the bonus round should be triggered
-            if (timesHit == 0)
+            if (timesHit < 10)
             {   
-                Debug.Log("Bonus!!!");
                 Reset();
                 BonusRound.ActivateBonusRoundAnimation();
             }
@@ -208,24 +207,27 @@ public class Stinkus : MonoBehaviour
         // Trash time duration depends on the cookie count
         if (Player.cookieCount < 10)
         {
-            trashTimer = 8;
+            trashTimer = 10.5f;
         }
         else if (Player.cookieCount < 20)
         {
-            trashTimer = 10;
+            trashTimer = 12.5f;
         }
         else if (Player.cookieCount < 30)
         {
-            trashTimer = 12;
+            trashTimer = 14.5f;
         }
         else
         {
-            trashTimer = 15;
+            trashTimer = 17.5f;
         }
 
         isTrashTime = true;
         Spawner.canSpawn = false;
         timeBetweenActions = 25;
+
+        // start the spawn timer higher than normal so trash won't immediatly spawn when trash time starts
+        spawnTimer = 2.5f;
 
     }
 

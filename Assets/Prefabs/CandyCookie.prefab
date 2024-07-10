@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.3, y: -0.09, z: 1.0730264}
-  m_LocalScale: {x: 0.13143264, y: 0.13143264, z: 0.049133312}
+  m_LocalScale: {x: 0.1312295, y: 0.1312295, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 18, y: 18}
+  m_Size: {x: 106, y: 106}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -118,9 +118,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.3356296, y: 0}
+  m_Offset: {x: 0.38726687, y: -0.025818639}
   serializedVersion: 2
-  m_Radius: 7.7349467
+  m_Radius: 8.122211
 --- !u!114 &7041228601931405739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,4 +136,5 @@ MonoBehaviour:
   minSpeed: 12
   maxSpeed: 12
   cookieValue: 1
-  hitEffect: {fileID: 5416041861357779435, guid: 671363cf0127bc740a8a0a6def9cdb60, type: 3}
+  candyHitEffect: {fileID: 6046112435135262297, guid: 1faf3315880d0744bae10d632921f2a4, type: 3}
+  hitEffect: {fileID: 5488581060179874153, guid: ee1fab07473988f48864d4d4cc7cf732, type: 3}

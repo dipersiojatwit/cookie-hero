@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c88ca766172619043bb5c502c5032c80
+guid: 7922fdb1f70d8d64cad03a68e88e16cf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: the_counts_spritesheet_0
+      name: FadedCandyCookie_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 533.3334
-        width: 225
-        height: 266.66666
+        y: 0
+        width: 750
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95d483c82bd78e749b35f76a4779d6dc
-      internalID: 1116954046
+      spriteID: 2bf02b27214a82941b9d8270823c60fd
+      internalID: -1897728419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: the_counts_spritesheet_1
+      name: FadedCandyCookie_1
       rect:
         serializedVersion: 2
-        x: 225
-        y: 533.3334
-        width: 225
-        height: 266.66666
+        x: 750
+        y: 0
+        width: 750
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfc29af1224090440ae3939a651b0fb8
-      internalID: 938553427
+      spriteID: 17f54a8cee585064aab47d0c99d9b698
+      internalID: -1544694304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: the_counts_spritesheet_2
+      name: FadedCandyCookie_2
       rect:
         serializedVersion: 2
-        x: 450
-        y: 533.3334
-        width: 225
-        height: 266.66666
+        x: 1500
+        y: 0
+        width: 750
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3aaac350f964aa438b4cb1424c734f9
-      internalID: -1738847914
+      spriteID: bd38b8c4e0c54ba428bef38709ce638a
+      internalID: 1427118275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: the_counts_spritesheet_3
+      name: FadedCandyCookie_3
       rect:
         serializedVersion: 2
-        x: 675
-        y: 533.3334
-        width: 225
-        height: 266.66666
+        x: 2250
+        y: 0
+        width: 750
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c038d5ca0fdf1964ea27631c216110da
-      internalID: -621507400
+      spriteID: cd46878398262b3418a12997685254dc
+      internalID: 120372582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: the_counts_spritesheet_4
+      name: FadedCandyCookie_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 267.33334
-        width: 225
-        height: 266.66666
+        x: 3000
+        y: 0
+        width: 750
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb9902fc49bc679449c929a30f8e5089
-      internalID: -2133638957
+      spriteID: 329e41efc2c50ea4283cc4e17c4daa4b
+      internalID: -1930677042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: the_counts_spritesheet_5
+      name: FadedCandyCookie_5
       rect:
         serializedVersion: 2
-        x: 225
-        y: 267.33334
-        width: 225
-        height: 266.66666
+        x: 3750
+        y: 0
+        width: 750
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,92 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3675ff20d351fa04ba48e3d4cd45d86c
-      internalID: 1733665113
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: the_counts_spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 450
-        y: 267.33334
-        width: 225
-        height: 266.66666
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4599941d158284546b0c7585fdc572ba
-      internalID: 1426898852
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: the_counts_spritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 675
-        y: 267.33334
-        width: 225
-        height: 266.66666
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6d52a2327790cb47be3f9f0b05c4f23
-      internalID: 1256303715
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: the_counts_spritesheet_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1.3333435
-        width: 225
-        height: 266.66666
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f34564fa8160cc24db4f39b7a0bc0943
-      internalID: 725253472
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: the_counts_spritesheet_9
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 1.3333435
-        width: 225
-        height: 266.66666
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b60671b303cdb5c4d904b4277cb4a326
-      internalID: 73512241
+      spriteID: 15ca53ad455a0ad4aa0f429dbb187db2
+      internalID: -430840152
       vertices: []
       indices: 
       edges: []
@@ -322,7 +238,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: bf61d42d14562f14c81bfecfc16b6213
+    spriteID: fcd131391ab4dc64691cf6f6127f36c7
     internalID: 0
     vertices: []
     indices: 
@@ -330,16 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      the_counts_spritesheet_0: 1116954046
-      the_counts_spritesheet_1: 938553427
-      the_counts_spritesheet_2: -1738847914
-      the_counts_spritesheet_3: -621507400
-      the_counts_spritesheet_4: -2133638957
-      the_counts_spritesheet_5: 1733665113
-      the_counts_spritesheet_6: 1426898852
-      the_counts_spritesheet_7: 1256303715
-      the_counts_spritesheet_8: 725253472
-      the_counts_spritesheet_9: 73512241
+      FadedCandyCookie_0: -1897728419
+      FadedCandyCookie_1: -1544694304
+      FadedCandyCookie_2: 1427118275
+      FadedCandyCookie_3: 120372582
+      FadedCandyCookie_4: -1930677042
+      FadedCandyCookie_5: -430840152
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

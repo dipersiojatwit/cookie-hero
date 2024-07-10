@@ -1,0 +1,721 @@
+fileFormatVersion: 2
+guid: 5b28d1125b8d5284598909eedca7f743
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2275
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ba4e7bb4570a44ca7d37114e144bcc
+      internalID: -1680743255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_1
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 2275
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1336d146d5b04334f98f2fd63b8e1fa9
+      internalID: 801735040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_2
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 2275
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5b8dc2fee4a264fb34bfa3a3f748a8
+      internalID: 1896507372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_3
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 2275
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe1346e5304cbb42af880647a1db387
+      internalID: 1529100820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1950
+        width: 224
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d0ca6369478824aba97b2bc3d564d8
+      internalID: 1375255084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_5
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1950
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 340b11ac51dadd5458c554f1fc92d6ca
+      internalID: 920034252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_6
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1950
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb6d9f26d5883e448c452429093c9e9
+      internalID: 424581289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_7
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 1950
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b10746b1443e0d4a9e59f52a45233da
+      internalID: -2060767631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1625
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5160ecd0e9cc8b4693678843a9b4c04
+      internalID: 1582229345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_9
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1625
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dedf6bf63d27ec4ea230412ade82c4d
+      internalID: 1946725451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_10
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1625
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd13c7612ffa3bd479453fdab631b6d1
+      internalID: 163745389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_11
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 1625
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1edb365e304ffb344a87eb57a5520345
+      internalID: 889407312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1300
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9688b2dc41fc8e4494bb7f8967faa64
+      internalID: 1197497933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_13
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1300
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01a23af9d299804c9a2b358b1cce518
+      internalID: 1004293180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_14
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1300
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0577528caac029a4093337091eaea332
+      internalID: -1248124773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_15
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 1300
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 261b3800d5a7a7d489e1e8e95ce7b5a3
+      internalID: -1993729726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 975
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d647a2840b6fc479a4feb861e18c4a
+      internalID: -1408896016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_17
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 975
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb46f84447c873e42a53d8c36d293579
+      internalID: 2020772132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_18
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 975
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470253b71520c9a4d8ca4ecc85bd652b
+      internalID: -51447468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_19
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 975
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 488482887e0809d4cbcb79d78a5bd75d
+      internalID: 2124692647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 650
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eead8e9f3cf3be14aadaa71b38225813
+      internalID: -862755140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_21
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 650
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a11e7d151db71d4fbf31e0e0e0fcc74
+      internalID: -960901674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_22
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 650
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a75f63593be3684d88de4be7862a3d4
+      internalID: -1197401230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_23
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 650
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082167ce7916c2d469f6d7c19e4e1b6e
+      internalID: -1500666512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 325
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1962817c9f30723439a464eb406c331c
+      internalID: -173337057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_25
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 325
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 991c0162b6a5ed14691b27c97ebf5003
+      internalID: -2105066457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheCountsSpreadsheet_26
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 325
+        width: 225
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03e8bd371fa4284e956d18a9b1b895d
+      internalID: 1252172759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 13f9165c83cfb754e9141a17bf3b911f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TheCountsSpreadsheet_0: -1680743255
+      TheCountsSpreadsheet_1: 801735040
+      TheCountsSpreadsheet_10: 163745389
+      TheCountsSpreadsheet_11: 889407312
+      TheCountsSpreadsheet_12: 1197497933
+      TheCountsSpreadsheet_13: 1004293180
+      TheCountsSpreadsheet_14: -1248124773
+      TheCountsSpreadsheet_15: -1993729726
+      TheCountsSpreadsheet_16: -1408896016
+      TheCountsSpreadsheet_17: 2020772132
+      TheCountsSpreadsheet_18: -51447468
+      TheCountsSpreadsheet_19: 2124692647
+      TheCountsSpreadsheet_2: 1896507372
+      TheCountsSpreadsheet_20: -862755140
+      TheCountsSpreadsheet_21: -960901674
+      TheCountsSpreadsheet_22: -1197401230
+      TheCountsSpreadsheet_23: -1500666512
+      TheCountsSpreadsheet_24: -173337057
+      TheCountsSpreadsheet_25: -2105066457
+      TheCountsSpreadsheet_26: 1252172759
+      TheCountsSpreadsheet_3: 1529100820
+      TheCountsSpreadsheet_4: 1375255084
+      TheCountsSpreadsheet_5: 920034252
+      TheCountsSpreadsheet_6: 424581289
+      TheCountsSpreadsheet_7: -2060767631
+      TheCountsSpreadsheet_8: 1582229345
+      TheCountsSpreadsheet_9: 1946725451
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

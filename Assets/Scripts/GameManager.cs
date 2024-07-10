@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
     public GameObject spriteOne;
     public GameObject spriteTwo;
     public GameObject spriteThree; 
-    public count theCounts;
+    public TheCounts theCounts;
     public AudioClip cookieHeroDeathOne;
     public AudioClip cookieHeroDeathTwo;
     public AudioClip executeOrder;
@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
         // don't use this if called every frame
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>();
-        theCounts = GameObject.FindGameObjectWithTag("TheCounts").GetComponent<count>();
+        theCounts = GameObject.FindGameObjectWithTag("TheCounts").GetComponent<TheCounts>();
         animator = GameObject.FindGameObjectWithTag("Wheel").GetComponent<Animator>();
         spriteRenderer = GameObject.FindGameObjectWithTag("Wheel").GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
@@ -116,6 +116,12 @@ public class GameManager : MonoBehaviour
         animator.SetBool("isReset", status);
 
     }
+    
+    public void RainbowWheel(Boolean status)
+    {
+        animator.SetBool("isRainbow", status);
+    }
+
 
     public void resetCookieCounter()
     {

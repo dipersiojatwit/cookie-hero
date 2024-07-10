@@ -1,6 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 public class CandyCookie : MonoBehaviour
 {
@@ -8,7 +13,8 @@ public class CandyCookie : MonoBehaviour
     public float maxSpeed = 4.5f;
     public int cookieValue;
     private float speed;
-    public GameObject hitEffect;
+    public ParticleSystem candyHitEffect;
+    public ParticleSystem hitEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +26,8 @@ public class CandyCookie : MonoBehaviour
     void Update()
     {
         this.transform.Translate(Vector3.down * speed * Time.deltaTime);
+        
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -28,11 +36,22 @@ public class CandyCookie : MonoBehaviour
         {
             // other's gameObject, rather than making a reference to player
             other.gameObject.GetComponent<Player>().GetCookie(cookieValue);
-            Player.RefillStamina();
+            Player.ResetDashDuration();
             Vector3 pos = this.transform.position;
             pos.y -= 0.45f;
-            Instantiate(hitEffect, pos, Quaternion.identity);
+            ParticleSystem.EmissionModule emissionVar = candyHitEffect.emission;
+            var emission = candyHitEffect.emission;
+            ParticleSystem.Burst[] bursts = new ParticleSystem.Burst[emission.burstCount];
+            emission.GetBursts(bursts);          
+            bursts[0].count = BonusRound.bonusRoundCookies + 1;
+            emission.SetBursts(bursts);
+            Instantiate(candyHitEffect, pos, Quaternion.identity);
             BonusRound.bonusRoundCookies++;
+            BonusRound.cookiesInBatch++;
+            BonusRound.isInitialWheelUpdate = true;
+            BonusRound.isTick = true;
+            Debug.Log("Tick true");
+    
             // destroy the cookie after it hits the player
             Destroy(this.gameObject);
 
@@ -47,5 +66,6 @@ public class CandyCookie : MonoBehaviour
 
         }
     }
+
 }
 

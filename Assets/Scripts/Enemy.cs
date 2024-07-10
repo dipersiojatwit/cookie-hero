@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             // other's gameObject, rather than making a reference to player
-            other.gameObject.GetComponent<Player>().takeDamage(1);
+            other.gameObject.GetComponent<Player>().TakeDamage(1);
             Vector3 pos = this.transform.position;
             pos.y -= 0.45f;
             Instantiate(hitEffect, pos, Quaternion.identity);

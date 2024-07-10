@@ -7,14 +7,14 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {   
     public int maxHealth = 3;
-    private float timeRemaining = 2;
-    private float speed;
+    private float timeRemaining = 3;
+    private static float speed;
     private int random;
     private int health;
     private int healthRestoreValue;
     public static int cookieCount;
     private float input;
-    private float dashDuration;
+    private static float dashDuration;
     private static float dashCooldown;
     private bool isInvincible;
     private bool isShiny;
@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
     public AudioClip shinySound;
     private AudioSource audioSource;
     private SpriteRenderer sprite;
-    private Animator animator;
+    private static Animator animator;
     private Color shinyColor;
     private Rigidbody2D rb;
 
@@ -70,22 +70,31 @@ public class Player : MonoBehaviour
         {   
             CheckInvincibility();
             CheckDash();
+
+            // check for horizontal input
             input = Input.GetAxisRaw("Horizontal");
             rb.velocity = new Vector2(input * speed, rb.velocity.y);
+
+            // check for dash input. Speed is checked before movement in handled
             if (Input.GetKey(KeyCode.Space))
             {   
+                // check if Cookie Hero can dash
                 if (dashCooldown <= 0)
                 {   
+                    // sets a cooldown, raises speed, sets duration of speed-up
                     dashCooldown = 5;
                     speed = 15;
                     dashDuration = 1f;
                     animator.SetBool("isDashing", true);
+
+                    // game manager handles the stamina wheel UI
                     GameManager.instance().EmptyWheel(true);
 
                 }
 
             }
             
+            // move in accordance to horizontal input
             if (input < 0)
             {
                 animator.SetBool("isRunningLeft", true);
@@ -108,13 +117,16 @@ public class Player : MonoBehaviour
 
     }
 
-    public void takeDamage(int damage)
+    public void TakeDamage(int damage)
     {   
+        // check for invincibility frames
         if (isInvincible)
         {
             return;
         }
         health -= damage;
+
+        // handle UI stuff
         heart.Hurt();
         GameManager.instance().updateHealth(health);
 
@@ -122,10 +134,14 @@ public class Player : MonoBehaviour
         if (health <= 0)
         {   
             heart.HeartDie();
+
+            // Stinkus retreats as soon as Cookie Hero dies
             Stinkus.Reset();
             Stinkus.canAct = false;
             Stinkus.trashCanSpawn = false;
             this.gameObject.SetActive(false);
+
+            // handle UI stuff
             GameManager.instance().deathCanvasSwitch();
             GameManager.instance().EmptyWheel(false);
 
@@ -144,6 +160,8 @@ public class Player : MonoBehaviour
             if (random <= 33)
             {
                 audioSource.PlayOneShot(cookieHeroHurtOne);
+                
+                TheCounts.HeadScratch();
 
             }
             if (random > 33 && random < 69)
@@ -164,9 +182,11 @@ public class Player : MonoBehaviour
     public void GetCookie(int value)
     {   
         cookieCount++;
-        BonusRound.ateCookie = true;
         CookieUI.CookieCrunch();
         GameManager.instance().updateCookieCounter(value);
+
+        // check if TheCounts should cough
+        TheCounts.RollCough();
 
         // only play munch animations while not dashing
         if (dashDuration <= 0)
@@ -232,6 +252,7 @@ public class Player : MonoBehaviour
             dashDuration = 0f;
             dashCooldown -= Time.deltaTime;
             animator.SetBool("isDashing", false);
+            GameManager.instance().RainbowWheel(false);
 
         }
 
@@ -272,11 +293,22 @@ public class Player : MonoBehaviour
     }
 
     // Called when getting a candy cookie
-    public static void RefillStamina()
+    public static void ResetDashDuration()
     {   
-        Debug.Log("refill");
-        dashCooldown = 0;
-        GameManager.instance().ResetWheel(true);
+        // if not dashing, make Cookie Hero automatically dash
+        Debug.Log(dashDuration);
+        if (dashDuration <= 0)
+        {   
+            Debug.Log("Auto dash");
+            dashCooldown = 5;
+            speed = 15;
+            animator.SetBool("isDashing", true);
+
+        }
+
+        // dash duration is reset for each candy cookie
+        dashDuration = 2.5f;
+        GameManager.instance().RainbowWheel(true);
     }
 
     public void Reset()
@@ -284,7 +316,7 @@ public class Player : MonoBehaviour
         health = maxHealth;
         healthRestoreValue = 20;
         cookieCount = 0;
-        timeRemaining = 2;
+        timeRemaining = 3;
         dashDuration = 0;
         dashCooldown = 0;
         speed = 5;
