@@ -23,15 +23,21 @@ public class CloudSpawner : MonoBehaviour
         timeBetweenSpawns = Random.Range(5, 10);
         timeRemaining -= Time.deltaTime;
 
+        // Spawn another cloud if it's time
         if (spawnTimer <= 0 && timeRemaining <= 0)
-        {
+        {   
+            // Choose which cloud to spawn
             int index = Random.Range(0, clouds.Length);
             GameObject cloud = clouds[index];
+
+            // Choose a random y-value for the cloud
             float y = Random.Range(3.6f, 7.7f);
+
+            // Always spawn the cloud off screen with a low x value
             Vector3 pos = new Vector3(-12, y, 0);
+
             // Quaternion for gimble lock prevention, spawn with Instantiate
             Instantiate(cloud, pos, Quaternion.identity);
-            // reset timer
             spawnTimer = timeBetweenSpawns;
             
         }
@@ -40,8 +46,12 @@ public class CloudSpawner : MonoBehaviour
             spawnTimer -= Time.deltaTime;
 
         }
+
     }
 
+    /// <summary>
+    /// Resets timeRemaining
+    /// </summary>
     public void Reset()
     {
         timeRemaining = 2;

@@ -138,3 +138,13 @@ MonoBehaviour:
   cookieValue: 1
   candyHitEffect: {fileID: 6046112435135262297, guid: 1faf3315880d0744bae10d632921f2a4, type: 3}
   hitEffect: {fileID: 5488581060179874153, guid: ee1fab07473988f48864d4d4cc7cf732, type: 3}
+  candyOne: {fileID: 6664866333120610575, guid: 4654d1e6368227849a4cd3d414b9ac30, type: 3}
+  candyTwo: {fileID: 2593890894973822880, guid: 1becc6158d64d934e84c99911441d681, type: 3}
+  candyThree: {fileID: 4513622377554331655, guid: ae7d466dbbbba484ca8b315a94a94497, type: 3}
+  candyFour: {fileID: 7001934378839970019, guid: bc054e2cdda0c3845a7d469edad6882e, type: 3}
+  candyFive: {fileID: 6083775097790558489, guid: d27a65dd93ef50648b0c23ab2c52f7f8, type: 3}
+  candySix: {fileID: 6874756361515310307, guid: 97b93c2cad85e5a478b489c7bb00644a, type: 3}
+  candySeven: {fileID: 1395331540959281601, guid: cb578da195db78247a6d08ee2915e95f, type: 3}
+  candyEight: {fileID: 8707299833085317710, guid: a2a507ba485c5104ca47de382860a47d, type: 3}
+  candyNine: {fileID: 8336463540991736871, guid: 7d2eb5f61252d0d489023c4ceab2c5f4, type: 3}
+  candyTen: {fileID: 221628010361405548, guid: 5208a0b0f770bc84a98612b113383db1, type: 3}

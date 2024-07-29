@@ -17,17 +17,19 @@ public class MusicManager : MonoBehaviour
         else
         {
             Destroy(this.gameObject);
-        }
 
+        }
 
         DontDestroyOnLoad(this);
     }
 
-    public static MusicManager instance()
+    public static MusicManager Instance()
     {
         return _instance; 
+
     }
 
+    // Other stuff
     private AudioSource audioSource; 
 
     // Start is called before the first frame update
@@ -37,8 +39,9 @@ public class MusicManager : MonoBehaviour
         if (!audioSource.isPlaying)
         {
             audioSource.Play();
+
         }
+
     }
 
-    
 }

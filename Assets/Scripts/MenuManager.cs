@@ -43,46 +43,49 @@ public class MenuManager : MonoBehaviour
 
     }
 
+    // Update is called once per frame
     void Update()
     {   
-        /*
-            animation events are not used here so the game 
-            can run in the background
-        */
-
-        // check if main scene should be loaded after transition
+        // Check if main scene should be loaded after transition
         if (isLoadMain)
         {  
             transitionTimer -= Time.deltaTime;
 
-            // check if the high score text should be transparent
+            // Check if the high score text should be transparent
             if (transitionTimer <= 0.4)
             {   
                 highScoreText.alpha = 0;
+
             }
 
-            // check if the circle transition is done
+            // Check if the circle transition is done
             if (transitionTimer <= 0)
             {
                 SceneManager.LoadScene("MainScene");
+
             }
         }
         else
         {   
             transitionTimer -= Time.deltaTime;
+
             if (transitionTimer <= 0)
             {
                 highScoreText.alpha = 255;
                 playButton.enabled = true;
+
             }
 
         }
 
     }
 
+    /// <summary>
+    /// Triggers the main scene load
+    /// </summary>
     public void onPlayClick()
     {   
-        // make sure the play button can't be clicked repeatedly
+        // Make sure the play button can't be clicked repeatedly
         playButton.enabled = false;
         animator.SetBool("isFadeIn", true);
         transitionTimer = .9f;
@@ -90,12 +93,19 @@ public class MenuManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Updates the high score display in the menu
+    /// </summary>
+    /// <param name="score">The score from the main scene</param>
+    /// <returns>A bool representing if the score was the high score</returns>
     public bool updateHighScore(int score)
     {   
+        // Check if the score is a new high score
         if (score > highScore)
         {
             highScore = score;
             return true;
+
         }
         return false;
 

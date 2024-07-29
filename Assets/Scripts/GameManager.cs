@@ -8,7 +8,7 @@ using System;
 using System.Diagnostics.Eventing.Reader;
 public class GameManager : MonoBehaviour
 {
-    //singlton
+    // Singlton
     private static GameManager _instance = null;
 
     private void Awake()
@@ -20,13 +20,13 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public static GameManager instance()
+    public static GameManager Instance()
     {
         return _instance;
 
     }
 
-    //Other stuff
+    // Other stuff
     public int cookieCount = 0;
     public int highScore = 0;
     public int random;
@@ -48,9 +48,10 @@ public class GameManager : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     
+    // Start is called before the first frame update
     private void Start()
     {   
-        // don't use this if called every frame
+        // Don't use this if called every frame
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>();
         theCounts = GameObject.FindGameObjectWithTag("TheCounts").GetComponent<TheCounts>();
@@ -61,13 +62,14 @@ public class GameManager : MonoBehaviour
         healthText.alpha = 0;
         cookieCounterText.alpha = 0;
 
-        //disable death UI 
+        // Disable death UI 
         deathCanvas.gameObject.SetActive(false);
 
     }
 
     void Update()
     {   
+        // Check if the circle fade out is done
         if (transitionTimer <= 0)
         {
             healthText.alpha = 255;
@@ -79,65 +81,86 @@ public class GameManager : MonoBehaviour
 
         }
 
-        // make UI elements transparent on overlay
+        // Make UI elements transparent on overlay
         if(player.transform.position.x < -5.1)
         {
             spriteRenderer.color = new Color(1, 1, 1, 0.8f);
-
         }
         else
         {
             spriteRenderer.color = new Color(1, 1, 1, 1);
+
         }
 
     }
 
-    public void updateHealth(int value)
+    /// <summary>
+    /// Updates the health text
+    /// </summary>
+    /// <param name="value">The health value to display</param>
+    public void UpdateHealth(int value)
     {
         healthText.text = "x" + value;
 
     }
 
-    public void updateCookieCounter(int value)
+    public void UpdateCookieCounter(int value)
     {
         cookieCount += value;
         cookieCounterText.text = "x" + cookieCount;
 
     }
 
+    /// <summary>
+    /// Triggers the stamina animation to deplete
+    /// </summary>
+    /// <param name="status">A bool to set the status of the animation</param>
     public void EmptyWheel(Boolean status)
     {
         animator.SetBool("isDashing", status);
 
     }
 
+    /// <summary>
+    /// Called to trigger the stamina reset animation
+    /// </summary>
+    /// <param name="status">The bool to set the animation status to</param>
     public void ResetWheel(Boolean status)
     {
         animator.SetBool("isReset", status);
 
     }
     
+    /// <summary>
+    /// Sets the status of the rainbow wheel animation
+    /// </summary>
+    /// <param name="status">The bool to set the animation true or false</param>
     public void RainbowWheel(Boolean status)
     {
         animator.SetBool("isRainbow", status);
+
     }
 
-
-    public void resetCookieCounter()
+    /// <summary>
+    /// Resets the cookie counter UI to 0
+    /// </summary>
+    public void ResetCookieCounter()
     {
         cookieCount = 0;
         cookieCounterText.text = "x" + cookieCount;
 
     }
 
-    public void deathCanvasSwitch()
+    /// <summary>
+    /// Switches the status of the death canvas screen
+    /// </summary>
+    public void DeathCanvasSwitch()
     {   
-        
         spawner.gameObject.SetActive(false);
         Stinkus.trashCanSpawn = false;
         Stinkus.canAct = false;
 
-        // make sure death canvas isn't already on
+        // Make sure death canvas isn't already on
         if (deathCanvas.gameObject.activeSelf)
         {
             deathCanvas.gameObject.SetActive(false);
@@ -169,12 +192,14 @@ public class GameManager : MonoBehaviour
 
     }
 
-
-    public void onResetClick()
+    /// <summary>
+    /// Called when the reset button is pressed to try again
+    /// </summary>
+    public void OnResetClick()
     {   
         if(deathCanvas.gameObject.activeSelf)
         {
-            deathCanvasSwitch();
+            DeathCanvasSwitch();
             player.Reset();
             spawner.gameObject.SetActive(true);
             Spawner.canSpawn = true;
@@ -184,11 +209,15 @@ public class GameManager : MonoBehaviour
             theCounts.Reset();
             Stinkus.Reset();
             Heart.SetHeartDieFalse();
+
         }
 
     }
 
-    public void onMenuClick()
+    /// <summary>
+    /// Called when clicking the menu button to load the menu
+    /// </summary>
+    public void OnMenuClick()
     {
         SceneManager.LoadScene("Menu");
 

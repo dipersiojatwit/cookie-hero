@@ -54,27 +54,27 @@ public class TheCounts : MonoBehaviour
     public void OnOne()
     {   
         audioSource.PlayOneShot(one);
-        GameManager.instance().numberOne();
+        GameManager.Instance().numberOne();
 
     }
 
     public void OnTwo()
     {   
         audioSource.PlayOneShot(two);
-        GameManager.instance().numberTwo();
+        GameManager.Instance().numberTwo();
 
     }
 
     public void OnThree()
     {
         audioSource.PlayOneShot(three);
-        GameManager.instance().numberThree();
+        GameManager.Instance().numberThree();
 
     }
 
     public void OnCountEnd()
     {
-        GameManager.instance().endCount();
+        GameManager.Instance().endCount();
         animator.SetBool("isReset", false);
 
     }

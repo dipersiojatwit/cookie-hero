@@ -25,8 +25,13 @@ public class Enemy : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Called when the trash hits another collider
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter2D(Collider2D other)
-    {
+    {   
+        // Cookie Hero will take damage if hit
         if(other.CompareTag("Player"))
         {
             // other's gameObject, rather than making a reference to player
@@ -43,6 +48,7 @@ public class Enemy : MonoBehaviour
             pos.y -= 0.45f;
             Instantiate(hitEffect, pos, Quaternion.identity);
             Destroy(this.gameObject);
+            
         }
         
     }

@@ -44,6 +44,9 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Resets timeRemaining to its initial value
+    /// </summary>
     public void Reset()
     {
         timeRemaining = 2.7f;

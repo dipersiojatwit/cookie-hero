@@ -49,7 +49,8 @@ public class Player : MonoBehaviour
         dashDuration = 0;
         dashCooldown = 0;
 
-        if (checkShiny())
+        // Check if shiny odds are rolled true
+        if (CheckShiny())
         {      
             isShiny = true;
             shinyColor = Color.cyan;
@@ -61,11 +62,13 @@ public class Player : MonoBehaviour
         }
         
     }
-
+    
     void FixedUpdate()
     {   
-        GameManager.instance().ResetWheel(false);
+        GameManager.Instance().ResetWheel(false);
         timeRemaining -= Time.deltaTime;
+
+        // Check if The Counts is done counting
         if (timeRemaining <= 0)
         {   
             CheckInvincibility();
@@ -88,7 +91,7 @@ public class Player : MonoBehaviour
                     animator.SetBool("isDashing", true);
 
                     // game manager handles the stamina wheel UI
-                    GameManager.instance().EmptyWheel(true);
+                    GameManager.Instance().EmptyWheel(true);
 
                 }
 
@@ -117,6 +120,10 @@ public class Player : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Called from Enemy script when colliding with Cookie Hero
+    /// </summary>
+    /// <param name="damage">The amount of damage the trash deals</param>
     public void TakeDamage(int damage)
     {   
         // check for invincibility frames
@@ -126,9 +133,9 @@ public class Player : MonoBehaviour
         }
         health -= damage;
 
-        // handle UI stuff
+        // handle UI elements
         heart.Hurt();
-        GameManager.instance().updateHealth(health);
+        GameManager.Instance().UpdateHealth(health);
 
         // check if Cookie Hero dies
         if (health <= 0)
@@ -141,9 +148,9 @@ public class Player : MonoBehaviour
             Stinkus.trashCanSpawn = false;
             this.gameObject.SetActive(false);
 
-            // handle UI stuff
-            GameManager.instance().deathCanvasSwitch();
-            GameManager.instance().EmptyWheel(false);
+            // handle UI elements
+            GameManager.Instance().DeathCanvasSwitch();
+            GameManager.Instance().EmptyWheel(false);
 
         }
         else
@@ -151,7 +158,7 @@ public class Player : MonoBehaviour
             // check if Cookie Hero got hit during trash time
             stinkus.GotHit();
 
-            // set invincibility frames
+            // set invincibility frames true for some time
             isInvincible = true;
             invincibilityTimer = 1f;
 
@@ -160,7 +167,6 @@ public class Player : MonoBehaviour
             if (random <= 33)
             {
                 audioSource.PlayOneShot(cookieHeroHurtOne);
-                
                 TheCounts.HeadScratch();
 
             }
@@ -179,16 +185,20 @@ public class Player : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Called from cookie scripts when colliding with Cookie Hero
+    /// </summary>
+    /// <param name="value">The cookie score amount to increase</param>
     public void GetCookie(int value)
     {   
         cookieCount++;
         CookieUI.CookieCrunch();
-        GameManager.instance().updateCookieCounter(value);
+        GameManager.Instance().UpdateCookieCounter(value);
 
-        // check if TheCounts should cough
+        // Check if TheCounts should cough
         TheCounts.RollCough();
 
-        // only play munch animations while not dashing
+        // Only play munch animations while not dashing
         if (dashDuration <= 0)
         {
             if (input < 0)
@@ -207,11 +217,11 @@ public class Player : MonoBehaviour
 
         }
 
-        // check if health restore threshold is surpassed
+        // Check if health restore threshold is surpassed
         if (cookieCount >= healthRestoreValue)
         {
             health++;
-            GameManager.instance().updateHealth(health);
+            GameManager.Instance().UpdateHealth(health);
 
             // set health restore value to a new threshold
             healthRestoreValue *= 2;
@@ -237,9 +247,12 @@ public class Player : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Checks and updates the status of dashing
+    /// </summary>
     void CheckDash()
     {   
-        // check if dashing
+        // Check if dashing and update
         if (dashDuration > 0)
         {
             dashDuration -= Time.deltaTime;
@@ -247,17 +260,20 @@ public class Player : MonoBehaviour
         }
         else
         {   
-            GameManager.instance().EmptyWheel(false);
+            GameManager.Instance().EmptyWheel(false);
             speed = 5f;
             dashDuration = 0f;
             dashCooldown -= Time.deltaTime;
             animator.SetBool("isDashing", false);
-            GameManager.instance().RainbowWheel(false);
+            GameManager.Instance().RainbowWheel(false);
 
         }
 
     }
 
+    /// <summary>
+    /// Check and update the status of invincibility
+    /// </summary>
     void CheckInvincibility()
     {
         if (isInvincible)
@@ -283,34 +299,43 @@ public class Player : MonoBehaviour
                 {
                     sprite.color = new Color(1, 1, 1, 1);
                 }
+
             }    
             
+            // Check if invincibility has run out
             if (invincibilityTimer <= 0)
             {
                 isInvincible = false;
+
             }
+
         }
+
     }
 
-    // Called when getting a candy cookie
+    /// <summary>
+    /// Called when getting a candy cookie to make Cookie Hero dash
+    /// </summary>
     public static void ResetDashDuration()
     {   
-        // if not dashing, make Cookie Hero automatically dash
-        Debug.Log(dashDuration);
+        // If not dashing, make Cookie Hero automatically dash
         if (dashDuration <= 0)
         {   
-            Debug.Log("Auto dash");
             dashCooldown = 5;
             speed = 15;
             animator.SetBool("isDashing", true);
 
         }
 
-        // dash duration is reset for each candy cookie
+        // Dash duration is reset for each candy cookie
         dashDuration = 2.5f;
-        GameManager.instance().RainbowWheel(true);
+        GameManager.Instance().RainbowWheel(true);
     }
 
+    /// <summary>
+    /// Resets the status of Cookie Hero
+    /// Called when he respawns
+    /// </summary>
     public void Reset()
     {   
         health = maxHealth;
@@ -324,12 +349,14 @@ public class Player : MonoBehaviour
         Vector3 pos = new Vector3(0.0f, -1.85f, 0.0f);
         this.transform.position = pos;
         this.gameObject.SetActive(true);
-        GameManager.instance().updateHealth(maxHealth);
-        GameManager.instance().resetCookieCounter();
-        GameManager.instance().ResetWheel(true);
-        GameManager.instance().EmptyWheel(false);
+        GameManager.Instance().UpdateHealth(maxHealth);
+        GameManager.Instance().ResetCookieCounter();
+        GameManager.Instance().ResetWheel(true);
+        GameManager.Instance().EmptyWheel(false);
         sprite = GetComponent<SpriteRenderer>();
-        if (checkShiny())
+
+        // Roll shiny odds on respawn
+        if (CheckShiny())
         {   
             isShiny = true;
             shinyColor = Color.cyan;
@@ -348,13 +375,19 @@ public class Player : MonoBehaviour
 
     }
 
-    public Boolean checkShiny()
+    /// <summary>
+    /// Rolls shiny odds
+    /// </summary>
+    /// <returns>True if the random number is 8192</returns>
+    public Boolean CheckShiny()
     {
         return (UnityEngine.Random.Range(1, 8192)) == 8192;
 
     }
 
-    // Animation events
+    /// <summary>
+    /// An animation event for munch animations
+    /// </summary>
     public void MunchFinished()
     {
         animator.SetBool("isMunchWhileStopped", false);

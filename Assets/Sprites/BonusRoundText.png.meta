@@ -114,9 +114,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2325
+        y: 4250
         width: 2600
-        height: 775
+        height: 850
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,9 +135,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1550
+        y: 3400
         width: 2600
-        height: 775
+        height: 850
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,9 +156,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 775
+        y: 2550
         width: 2600
-        height: 775
+        height: 850
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,9 +177,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 1700
         width: 2600
-        height: 775
+        height: 850
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,6 +189,48 @@ TextureImporter:
       bones: []
       spriteID: 7d61cf65e6200c74d9999530396228dc
       internalID: 18196799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BonusRoundText_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 850
+        width: 2600
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d63037dfaf637914fabbab392fbd7272
+      internalID: -103388950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BonusRoundText_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2600
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9137da2960555d1488a698fa1206ac2f
+      internalID: 909540994
       vertices: []
       indices: 
       edges: []
@@ -208,6 +250,8 @@ TextureImporter:
       BonusRoundText_1: -173233324
       BonusRoundText_2: 1594686640
       BonusRoundText_3: 18196799
+      BonusRoundText_4: -103388950
+      BonusRoundText_5: 909540994
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

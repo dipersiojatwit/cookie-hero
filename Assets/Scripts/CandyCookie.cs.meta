@@ -3,7 +3,19 @@ guid: 27d05a717b447654fbf1fb72b6d15166
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - candyHitEffect: {instanceID: 0}
+  - hitEffect: {instanceID: 0}
+  - candyOne: {instanceID: 0}
+  - candyTwo: {instanceID: 0}
+  - candyThree: {instanceID: 0}
+  - candyFour: {instanceID: 0}
+  - candyFive: {instanceID: 0}
+  - candySix: {instanceID: 0}
+  - candySeven: {instanceID: 0}
+  - candyEight: {instanceID: 0}
+  - candyNine: {instanceID: 0}
+  - candyTen: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

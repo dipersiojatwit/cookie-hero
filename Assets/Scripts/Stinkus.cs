@@ -152,6 +152,7 @@ public class Stinkus : MonoBehaviour
             if (timesHit < 10)
             {   
                 Reset();
+                BonusRound.isStart = true;
                 BonusRound.ActivateBonusRoundAnimation();
             }
             else
