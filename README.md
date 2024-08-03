@@ -2,20 +2,20 @@
 This repository is for the development of a game I've been making in Unity called Cookie Hero. 
 # About the game
 Cookie Hero is a simple high score based arcade style game. Playing as Cookie Hero, a cookie-craving fine young man, you'll collect as many cookies as you can 
-as they fall from the sky. But watch out! The vile, trash-loving, cookie-hating Stinkus will throw trash at Cookie Hero just to ruin his day!  
+as they fall from the sky. But watch out! The vile trash-loving, cookie-hating Stinkus will throw trash at Cookie Hero just to ruin his day!  
 # How to play
 I plan on having Cookie Hero available to play online, but the game's 0.1 build can be played now by running Cookie Hero 0.1.exe in the CookieHeroBuild0.1 folder. Although this is an early build, I've tried to polish it with subtle touches and Easter eggs.  
-# Future Builds
-I plan to add new mechanics, like bonus rounds, and more fun characters. I'm also working on upgrading the game's visuals too!
 # Screenshots
-![Screenshot (175)](https://github.com/dipersiojatwit/cookie-hero/assets/113375793/04fd326a-6b9e-4fb6-8572-bf45673e4e59)<br>
-*Cookie Hero standing absentmindedly. He's also out of stamina. The illusive Cat Cloud can also be seen in the background.<br><br><br>
-![Screenshot (178)](https://github.com/dipersiojatwit/cookie-hero/assets/113375793/0fbea56b-f7fe-461e-b53d-3a06e2768b38)<br>
-*Cookie Hero after eating a cookie.<br><br><br>
-![Screenshot (179)](https://github.com/dipersiojatwit/cookie-hero/assets/113375793/5346a31d-409e-4fa8-80ce-f79a1960d202)<br>
-*Cookie Hero after getting hit by a toaster during Trash Time. Looks like there was still toast in it.<br><br><br>
-![Screenshot (174)](https://github.com/dipersiojatwit/cookie-hero/assets/113375793/98f5d908-b5e3-4aae-8850-96c4a0b56e79)<br>
-*The game over screen with the round's score. Looks like it wasn't the high score.
+![CookieHeroGameplayOne](https://github.com/user-attachments/assets/ce8173f7-b565-4ccf-b3bb-3cf6786a692f)<br>
+*Cookie Hero eating a cookie as Stinkus ominously stares at him.<br><br><br>
+![CookieHeroGameplayTwo](https://github.com/user-attachments/assets/ce766fb0-7541-4ab6-a605-91cb4899a6ea)<br>
+*Cookie Hero after getting hit by a trashed car. The Counts does not seem impressed.<br><br><br>
+![CookieHeroGameplayThree](https://github.com/user-attachments/assets/5c0695a0-c71c-48fc-9a08-bd6e572fec4c)<br>
+*Cookie Hero triggers the bonus round by dodging all the trash during Trash Time.<br><br><br>
+![CookieHeroGameplayFour](https://github.com/user-attachments/assets/7086d9c0-3056-4255-b72d-2cffd1d3e3bb)<br>
+*Cookie Hero eating a candy cookie in the bonus round. Looks like he's got a good streak going!<br><br><br>
+![CookieHeroGameplayFive](https://github.com/user-attachments/assets/2dfa7b77-3582-4493-8499-4d784b9bc5f6)<br>
+*The bonus cookie that spawns at the end of the bonus round. It's size depends on the cookie streak. Looks like Cookie Hero did pretty well! 
 
 
 
